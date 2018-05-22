@@ -71,7 +71,7 @@ int main(){
     cout << "A: Record Click - S: Start Macro - R: Reset Macro - Q: Quit\nWait Time (ms) = ";
     int speed; cin>>speed; cout<<"Ready.\n";
 
-    Macro macro = CreateMacro();
+    Macro macro = CreateMacro(speed,speed);
     bool MacroAdded = true, MacroExecuted = true, MacroReset = true;
 
     while(true){
@@ -99,7 +99,7 @@ int main(){
         if(GetAsyncKeyState('Q'))
             break;
 
-        Sleep(speed);
+        Sleep(10);
     }
     return 0;
 }
